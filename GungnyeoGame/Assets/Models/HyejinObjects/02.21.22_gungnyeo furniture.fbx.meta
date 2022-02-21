@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2165457b7bbdc4d4c83aeb29b464b140
+guid: 432b074ccac79424aae87f0824cfa894
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: WhiteboxMat
-    second: {fileID: 2100000, guid: eb854ea6ed0f5d64ca627d2bebbb87c7, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: 9ac282c6c2320fa44a7e491be80b5b21, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

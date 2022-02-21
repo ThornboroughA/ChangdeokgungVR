@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9f0c11b6c591b5147b9152edaa716da2
+guid: 3b520b291b0950a4184fb04cf3bffc8d
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BrownWoodDark1
-    second: {fileID: 2100000, guid: 1a02729f202440c47852b53d8bce1b8e, type: 2}
+      name: Red1
+    second: {fileID: 2100000, guid: bcadeac12d955df4aaf25656f8fe72bb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BrownWoodDark2
-    second: {fileID: 2100000, guid: 37f1cdc91f79e7748a4f79d2aa6e45e4, type: 2}
+      name: RoofDark
+    second: {fileID: 2100000, guid: e40d161198d5adb4ca5b32cf25247375, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
