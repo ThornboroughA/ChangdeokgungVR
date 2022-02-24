@@ -10,7 +10,7 @@ public class Hand : MonoBehaviour
 {
 
     [SerializeField] private bool hideHandOnGrab = false;
-    private SkinnedMeshRenderer mesh;
+    [SerializeField] private SkinnedMeshRenderer[] mesh;
 
     //ANIMATION
     [SerializeField] private float animationSpeed;
@@ -31,7 +31,7 @@ public class Hand : MonoBehaviour
     private void Start()
     {
         
-        mesh = GetComponentInChildren<SkinnedMeshRenderer>();
+        //mesh = GetComponentInChildren<SkinnedMeshRenderer>();
         
         //ANIMATION
         animator = GetComponent<Animator>();
@@ -76,7 +76,11 @@ public class Hand : MonoBehaviour
         if (!hideHandOnGrab)
             return;
 
-        mesh.enabled = !mesh.enabled;
+        foreach (SkinnedMeshRenderer mesh in mesh)
+        {
+            mesh.enabled = !mesh.enabled;
+        }
+        
 
     }
 }

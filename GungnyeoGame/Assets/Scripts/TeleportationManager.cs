@@ -19,6 +19,8 @@ public class TeleportationManager : MonoBehaviour
     private Coroutine cooldownTimer;
     private bool cooldownState = false;
 
+    [SerializeField] private bool useScript = true;
+
     #region Singleton
     public static TeleportationManager instance;
     private void Awake()
@@ -35,6 +37,8 @@ public class TeleportationManager : MonoBehaviour
 
     private void Start()
     {   
+        
+
         //Subscribe to the input actions
         var activateLeft = actionAsset.FindActionMap("XRI LeftHand").FindAction("Teleport Mode Activate");
         activateLeft.Enable();
@@ -52,12 +56,17 @@ public class TeleportationManager : MonoBehaviour
         cancelRight.Enable();
         cancelRight.performed += OnTeleportCancelRight;
 
+        if (useScript == false)
+        {
+            return;
+        }
 
         //Hide anchors at start
-        foreach(TeleportAnchorSubject tp in teleportationAnchors)
+        foreach (TeleportAnchorSubject tp in teleportationAnchors)
         {
             tp.MakeInvisible();
         }
+        
 
     }
 
@@ -83,13 +92,14 @@ public class TeleportationManager : MonoBehaviour
     }
 
     public void ResetTeleports()
-    {
+    { 
         if (cooldownState)
             return;
 
         ToggleRaycasts(true);
         HideAnchors();
         cooldownTimer = StartCoroutine(CooldownTimer(1f));
+        
     }
 
 
@@ -102,7 +112,9 @@ public class TeleportationManager : MonoBehaviour
     }
     private void ToggleRaycasts(int conID, bool rayState)
     { //toggle
+        
         handControllers[conID].ToggleRay(rayState);
+        
     }
 
     //on press action
@@ -110,7 +122,6 @@ public class TeleportationManager : MonoBehaviour
     {
         foreach(TeleportAnchorSubject tpSub in teleportationAnchors)
         {
-
             float range = GetRange(tpSub.gameObject.transform);
             if (range < teleportMaxRange && range > teleportMinRange)
             {
@@ -123,11 +134,13 @@ public class TeleportationManager : MonoBehaviour
     //on release action
     public void HideAnchors()
     {
+        //makes all revealed TP anchors invisible
         foreach (TeleportAnchorSubject active in activeSubjects)
         {
             active.MakeInvisible();
         }
         activeSubjects.Clear();
+        
     }
 
     private float GetRange(Transform subTransform)

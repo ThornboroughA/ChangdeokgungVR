@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: G_Trigger
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature.001
+    m_Weight: 0
+  - m_Path: Armature.001/Arm
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Index.1
+    m_Weight: 1
+  - m_Path: Armature.001/Arm/Hand/Index.1/Index.2
+    m_Weight: 1
+  - m_Path: Armature.001/Arm/Hand/Index.1/Index.2/Index.3
+    m_Weight: 1
+  - m_Path: Armature.001/Arm/Hand/Index.1/Index.2/Index.3/Index.4
+    m_Weight: 1
+  - m_Path: Armature.001/Arm/Hand/Index.1/Index.2/Index.3/Index.4/Index.4_end
+    m_Weight: 1
+  - m_Path: Armature.001/Arm/Hand/Middle.1
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Middle.1/Middle.2
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Middle.1/Middle.2/Middle.3
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Middle.1/Middle.2/Middle.3/Middle.4
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Middle.1/Middle.2/Middle.3/Middle.4/Middle.4_end
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Pinky.1
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Pinky.1/Pinky.2
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Pinky.1/Pinky.2/Pinky.3
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Pinky.1/Pinky.2/Pinky.3/Pinky.4
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Pinky.1/Pinky.2/Pinky.3/Pinky.4/Pinky.4_end
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Ring.1
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Ring.1/Ring.2
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Ring.1/Ring.2/Ring.3
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Ring.1/Ring.2/Ring.3/Ring.4
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Ring.1/Ring.2/Ring.3/Ring.4/Ring.4_end
+    m_Weight: 0
+  - m_Path: Armature.001/Arm/Hand/Thumb.1
+    m_Weight: 1
+  - m_Path: Armature.001/Arm/Hand/Thumb.1/Thumb.2
+    m_Weight: 1
+  - m_Path: Armature.001/Arm/Hand/Thumb.1/Thumb.2/Thumb.3
+    m_Weight: 1
+  - m_Path: Armature.001/Arm/Hand/Thumb.1/Thumb.2/Thumb.3/Thumb.3_end
+    m_Weight: 1
+  - m_Path: Hand_Retopo_Sleeve.004
+    m_Weight: 0
+  - m_Path: Retopo_v2.002
+    m_Weight: 0

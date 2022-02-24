@@ -40,11 +40,12 @@ public class LockBehavior : MonoBehaviour
         objRigid.useGravity = true;
         lidScript.UnlockSelf();
 
-        gameObject.layer = 0;
+        //gameObject.layer = 0;
 
         //switch colliders; spherecollider is for grabbing, boxcollider is for the object's physics
-        GetComponent<SphereCollider>().enabled = false;
+        GetComponent<SphereCollider>().isTrigger = true;
         GetComponent<BoxCollider>().enabled = true;
+        
     }
 
 
@@ -56,7 +57,8 @@ public class LockBehavior : MonoBehaviour
 
     private void DisableKeyAndSocket()
     {
-        key.GetComponent<BoxCollider>().enabled = false;
+        //key.GetComponent<BoxCollider>().enabled = false;
+        key.layer = 0;
     }
 
 }
