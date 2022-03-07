@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: RoomNames Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: RoomNames
+  m_TableCollectionNameGuidString: ff517032403a9704f807b5705a940bf8
+  m_Entries:
+  - m_Id: 32261636096
+    m_Key: GnCorridorStart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1712734699520
+    m_Key: GnCorridorEnd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2444133236736
+    m_Key: GnAtrium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2715919941632
+    m_Key: GnRoom3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3112558493696
+    m_Key: StorageDoorFar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3915461525504
+    m_Key: GnRoom2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24096216809472
+    m_Key: GnRoom1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24138306650112
+    m_Key: StorageWindow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24200113913856
+    m_Key: StorageCupboards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24245097824256
+    m_Key: CorridorEnd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24314643578880
+    m_Key: JungjeonCorridor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24346646118400
+    m_Key: JungjeonEntranceOut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24391848132608
+    m_Key: JungjeonEntranceIn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24430423146496
+    m_Key: JungjeonDesk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24473045663744
+    m_Key: JungjeonBookcase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24510286888960
+    m_Key: JungjeonNorigae
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24551261044736
+    m_Key: JungjeonBackRoom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24587684380672
+    m_Key: JungjeonDresser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28380601876480
+    m_Key: CorridorMid
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8494521826385854488
+  references:
+    version: 2
+    RefIds:
+    - rid: 8494521826385854488
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1646083726594

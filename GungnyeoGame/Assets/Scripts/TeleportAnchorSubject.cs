@@ -7,6 +7,16 @@ namespace UnityEngine.XR.Interaction.Toolkit
     public class TeleportAnchorSubject : TeleportationAnchor
     {
 
+        public TeleportAnchorSubject[] visibleTeleports;
+
+        [SerializeField] private GameObject textObject;
+
+        [SerializeField] private bool hasVisited = false;
+
+        private void Start()
+        {
+            textObject.SetActive(false);
+        }
 
         public void MakeVisible()
         {
@@ -14,25 +24,28 @@ namespace UnityEngine.XR.Interaction.Toolkit
 
             gameObject.SetActive(true);
 
+            if (hasVisited) textObject.SetActive(true);
+
         }
         public void MakeInvisible()
         {
             gameObject.SetActive(false);
-            //StartCoroutine(SetInactive(0.35f));
         }
 
+        public void SetVisited()
+        {
+            hasVisited = true;
+        }
 
         private void RevealSplash()
         {
             //add later
         }
 
+        
 
-        private IEnumerator SetInactive(float time)
-        {
-            yield return new WaitForSeconds(time);
-            gameObject.SetActive(false);
-        }
+
+
 
 
     }

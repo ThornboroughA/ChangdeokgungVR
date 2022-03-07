@@ -9,7 +9,7 @@ public class HingeSound : MonoBehaviour
     private Rigidbody rigidBody;
     private XRGrabInteractable grabbable;
 
-    private bool isActive = false;
+    //private bool isActive = false;
 
 
     //testing
@@ -31,7 +31,7 @@ public class HingeSound : MonoBehaviour
 
     private void StartGrab()
     {
-        isActive = true;
+        //isActive = true;
 
         StartCoroutine(NoisePlayer());
     }

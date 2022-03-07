@@ -6,20 +6,12 @@ using UnityEngine.InputSystem;
 
 public class TeleportationManager : MonoBehaviour
 {
-
     [SerializeField] private InputActionAsset actionAsset;
     [SerializeField] private HandController[] handControllers;
 
     [SerializeField] private TeleportAnchorSubject[] teleportationAnchors;
-    [SerializeField] private Transform playerLocation;
     [SerializeField] private List<TeleportAnchorSubject> activeSubjects = new List<TeleportAnchorSubject>();
 
-    [SerializeField] private float teleportMaxRange = 10f, teleportMinRange = 3f;
-
-    private Coroutine cooldownTimer;
-    private bool cooldownState = false;
-
-    [SerializeField] private bool useScript = true;
 
     #region Singleton
     public static TeleportationManager instance;
@@ -36,9 +28,8 @@ public class TeleportationManager : MonoBehaviour
     #endregion
 
     private void Start()
-    {   
-        
-
+    {
+        #region Controllers 1
         //Subscribe to the input actions
         var activateLeft = actionAsset.FindActionMap("XRI LeftHand").FindAction("Teleport Mode Activate");
         activateLeft.Enable();
@@ -55,50 +46,46 @@ public class TeleportationManager : MonoBehaviour
         var cancelRight = actionAsset.FindActionMap("XRI RightHand").FindAction("Teleport Mode Cancel");
         cancelRight.Enable();
         cancelRight.performed += OnTeleportCancelRight;
-
-        if (useScript == false)
-        {
-            return;
-        }
+        #endregion
 
         //Hide anchors at start
         foreach (TeleportAnchorSubject tp in teleportationAnchors)
         {
             tp.MakeInvisible();
         }
-        
-
+        foreach (TeleportAnchorSubject anchor in teleportationAnchors)
+        {
+            if (anchor.visibleTeleports.Length == 0) Debug.LogWarning("No teleports assigned to " + anchor.gameObject);
+        }
     }
 
+    #region Controllers 2
     private void OnTeleportActivateLeft(InputAction.CallbackContext context)
     {
         ToggleRaycasts(0, false);
-        RevealAnchors();
+        RevealLocalAnchors();
     }
     private void OnTeleportCancelLeft(InputAction.CallbackContext context)
     {
         ToggleRaycasts(0, true);
-        HideAnchors();
+        HideLocalAnchors();
     }
     private void OnTeleportActivateRight(InputAction.CallbackContext context)
     {
         ToggleRaycasts(1, false);
-        RevealAnchors();
+        RevealLocalAnchors();
     }
     private void OnTeleportCancelRight(InputAction.CallbackContext context)
     {
         ToggleRaycasts(1, true);
-        HideAnchors();
+        HideLocalAnchors();
     }
+    #endregion
 
     public void ResetTeleports()
     { 
-        if (cooldownState)
-            return;
-
         ToggleRaycasts(true);
-        HideAnchors();
-        cooldownTimer = StartCoroutine(CooldownTimer(1f));
+        ClearLocalAnchors();
         
     }
 
@@ -117,43 +104,33 @@ public class TeleportationManager : MonoBehaviour
         
     }
 
-    //on press action
-    public void RevealAnchors()
+    public void SetLocalAnchors(TeleportAnchorSubject currentSubject)
     {
-        foreach(TeleportAnchorSubject tpSub in teleportationAnchors)
+        foreach(TeleportAnchorSubject localSubject in currentSubject.visibleTeleports)
         {
-            float range = GetRange(tpSub.gameObject.transform);
-            if (range < teleportMaxRange && range > teleportMinRange)
-            {
-                tpSub.MakeVisible();
-                activeSubjects.Add(tpSub);
-            }
+            activeSubjects.Add(localSubject);
         }
     }
-
-    //on release action
-    public void HideAnchors()
+    public void ClearLocalAnchors()
     {
-        //makes all revealed TP anchors invisible
         foreach (TeleportAnchorSubject active in activeSubjects)
         {
             active.MakeInvisible();
         }
         activeSubjects.Clear();
-        
     }
-
-    private float GetRange(Transform subTransform)
+    public void RevealLocalAnchors()
     {
-        float dist = Vector3.Distance(subTransform.position, playerLocation.position);
-        return dist;
+        foreach (TeleportAnchorSubject active in activeSubjects)
+        {
+            active.MakeVisible();
+        }
     }
-
-
-    private IEnumerator CooldownTimer(float time)
+    public void HideLocalAnchors()
     {
-        cooldownState = true;
-        yield return new WaitForSeconds(time);
-        cooldownState = false;
+        foreach (TeleportAnchorSubject active in activeSubjects)
+        {
+            active.MakeInvisible();
+        }
     }
 }
