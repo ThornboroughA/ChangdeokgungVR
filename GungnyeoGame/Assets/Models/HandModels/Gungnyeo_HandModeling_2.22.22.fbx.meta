@@ -18,7 +18,12 @@ ModelImporter:
   - first:
       74: 9188296789342173962
     second: Armature.001|PointAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HandMat
+    second: {fileID: 2100000, guid: a7d0ff514ad574e43bb592b51f1a2fe6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

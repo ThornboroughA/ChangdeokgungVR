@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: GreenColumns
+    second: {fileID: 2100000, guid: 16bb0f55bae693d419fe59db45808af0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: WindowWhite
     second: {fileID: 2100000, guid: bcadeac12d955df4aaf25656f8fe72bb, type: 2}
   materials:
