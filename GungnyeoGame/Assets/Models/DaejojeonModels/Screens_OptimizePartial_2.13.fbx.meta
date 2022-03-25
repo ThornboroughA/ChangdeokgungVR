@@ -7,13 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: BrownWoodDark2
+    second: {fileID: 2100000, guid: fa544d9f923c05348b9aba6a91a5fad7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: GreenColumns
     second: {fileID: 2100000, guid: 16bb0f55bae693d419fe59db45808af0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: OndolWallsFancy
+    second: {fileID: 2100000, guid: 14248efd288b95e4f837b50ec29d9aca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: WindowWhite
-    second: {fileID: 2100000, guid: bcadeac12d955df4aaf25656f8fe72bb, type: 2}
+    second: {fileID: 2100000, guid: 57844cbcb257c624cad66c7ae934879a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

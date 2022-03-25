@@ -4470,6 +4470,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1177795211226116914, guid: 97389292d9299214a8200ebd74ee62fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a7d0ff514ad574e43bb592b51f1a2fe6, type: 2}
+    - target: {fileID: 1177795211503768253, guid: 97389292d9299214a8200ebd74ee62fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a7d0ff514ad574e43bb592b51f1a2fe6, type: 2}
+    - target: {fileID: 5914408101410685078, guid: 97389292d9299214a8200ebd74ee62fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a8f73469ef46dc4ca7d5ca9d7c8e244, type: 2}
+    - target: {fileID: 5914408101410685078, guid: 97389292d9299214a8200ebd74ee62fc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: dfdc2381de993844395fe688d7cb00bb, type: 2}
+    - target: {fileID: 5914408101688746265, guid: 97389292d9299214a8200ebd74ee62fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a8f73469ef46dc4ca7d5ca9d7c8e244, type: 2}
+    - target: {fileID: 5914408101688746265, guid: 97389292d9299214a8200ebd74ee62fc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: dfdc2381de993844395fe688d7cb00bb, type: 2}
     - target: {fileID: 8770776571391405689, guid: 97389292d9299214a8200ebd74ee62fc, type: 3}
       propertyPath: m_Name
       value: XR_Player_2.22.22
@@ -4574,11 +4598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c8f140d89c7e443841b90d2ac82d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &2140342425 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9152730135843996793, guid: 97389292d9299214a8200ebd74ee62fc, type: 3}
-  m_PrefabInstance: {fileID: 2140342422}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5089325934422333258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,6 +4707,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_TeleportAnchorTransform: {fileID: 5089325935751693962}
+  visibleTeleports: []
+  textObject: {fileID: 0}
+  hasVisited: 0
 --- !u!1 &5089325934422333260
 GameObject:
   m_ObjectHideFlags: 0
@@ -4741,11 +4763,7 @@ MonoBehaviour:
   - {fileID: 2140342423}
   teleportationAnchors:
   - {fileID: 5089325934422333258}
-  playerLocation: {fileID: 2140342425}
   activeSubjects: []
-  teleportMaxRange: 25
-  teleportMinRange: 0.3
-  useScript: 1
 --- !u!1 &5089325935001170982
 GameObject:
   m_ObjectHideFlags: 0
