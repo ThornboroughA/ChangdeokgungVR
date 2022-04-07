@@ -5,7 +5,7 @@ Currently in production, with an anticipated release for an initial version in m
 
 ![Gameplay example](Media/changdeokgung_vr_semester1.gif)
 
-###Credits###
+### Credits
 
 Xander Thornborough: game director, Unity and C# coding, shaders, architectural modeling.
 
