@@ -5,10 +5,15 @@ Currently in production, with an anticipated release for an initial version in m
 
 ![Gameplay example](Media/changdeokgung_vr_semester1.gif)
 
-***Credits***
+###Credits###
+
 Xander Thornborough: game director, Unity and C# coding, shaders, architectural modeling.
+
 Dabin Lee: art director, 2D art and animation.
+
 Hyejin Jang: interior and interactive asset modeling.
 
 
 This project is made in Unity 2021.2.9f1 using XR Interaction Toolkit 2.0.1.
+
+![Main character art](Media/Gungnyeo.png)
