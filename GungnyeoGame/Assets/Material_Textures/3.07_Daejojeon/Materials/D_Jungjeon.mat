@@ -95,7 +95,7 @@ Material:
     - Vector1_e547955b98214b72af1eba0eac343de4: 20
     - Vector1_f167bd30256c4245bc2e093f46100411: 1
     - _AlphaClip: 0
-    - _AmbientStrength: 0.569
+    - _AmbientStrength: 0.239
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -111,9 +111,9 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Gradient_Height: 2.03
-    - _Gradient_Magnitude: 0.65
-    - _Gradient_Strength: 1.75
+    - _Gradient_Height: 2.7
+    - _Gradient_Magnitude: 0.53
+    - _Gradient_Strength: 2.58
     - _LightingCutoff: 0.079
     - _Metallic: 0
     - _OcclusionStrength: 1

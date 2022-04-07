@@ -8,6 +8,14 @@ public class Unidirectional_ConfigJoint : MonoBehaviour
     [SerializeField] private float motionDistance = 0.5f;
     [Tooltip("Locks the motion of the corresponding axis. 0 is locked, 1 is limited.")]
     [SerializeField] private Vector3 axisLock = new Vector3(0, 0, 0);
+    [Tooltip("Does this GameObject have children with rigidbodies? All children must have rigidbodies.")]
+    [SerializeField] private bool hasRBChild = false;
+
+    private ConfigurableJoint configJoint;
+
+    [Tooltip("Offset for the drawer's linear motion. If it has children, it seems to have a different offset otherwise.")]
+    [SerializeField] private float anchorDistance;
+    
 
     private Rigidbody rigidBody;
 
@@ -36,11 +44,12 @@ public class Unidirectional_ConfigJoint : MonoBehaviour
     }
     private void AddConfigurableJoint ()
     {
-        ConfigurableJoint configJoint = gameObject.AddComponent<ConfigurableJoint>();
+        configJoint = gameObject.AddComponent<ConfigurableJoint>();
 
         SoftJointLimit limit = new SoftJointLimit();
         limit.limit = motionDistance * 0.5f ;
         configJoint.linearLimit = limit;
+        
 
         LockAxis(configJoint);
     }
@@ -49,7 +58,24 @@ public class Unidirectional_ConfigJoint : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         AddConfigurableJoint();
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.75f);
+
+        // 34.77 2.97 -0.31
+
+        if (hasRBChild == true)
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).GetComponent<Rigidbody>().useGravity = true;
+            }
+
+            Vector3 anchorValues = configJoint.connectedAnchor;
+            anchorValues = Vector3.Scale(anchorValues, (new Vector3(1, 1, 1) - axisLock));
+
+            configJoint.autoConfigureConnectedAnchor = false;
+            configJoint.connectedAnchor = anchorValues - (anchorDistance * axisLock);
+        }
+
         TransformObjectInDirection(true);
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,17 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
+
+
+    private void Start()
+    {
+        SwitchToKorean();
+    }
+
+    private void SwitchToKorean()
+    {
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
+    }
 
 
     public void NextScene(string sceneId)

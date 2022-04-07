@@ -6,6 +6,7 @@ using UnityEngine.Localization.Settings;
 public class LocalizationMenu : MonoBehaviour
 {
 
+    
 
 
     // Index of 0 is English, index of 1 is Korean.
