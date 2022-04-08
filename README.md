@@ -13,7 +13,6 @@ Dabin Lee: art director, 2D art and animation.
 
 Hyejin Jang: interior and interactive asset modeling.
 
+![Main character art](Media/Gungnyeo.png)
 
 This project is made in Unity 2021.2.9f1 using XR Interaction Toolkit 2.0.1.
-
-![Main character art](Media/Gungnyeo.png)
