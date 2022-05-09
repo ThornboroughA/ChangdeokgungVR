@@ -28,14 +28,16 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        SwitchToKorean();
+        StartCoroutine(SwitchToKorean());
     }
 
-    private void SwitchToKorean()
+
+    private IEnumerator SwitchToKorean()
     {
+        yield return new WaitForSeconds(3f);
+        Debug.Log("korean switch");
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
     }
-
 
     public void NextScene(string sceneId)
     {

@@ -58,7 +58,7 @@ public class Unidirectional_ConfigJoint : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         AddConfigurableJoint();
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(0.5f);
 
         // 34.77 2.97 -0.31
 
