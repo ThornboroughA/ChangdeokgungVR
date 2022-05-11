@@ -1,7 +1,7 @@
-# Changdeokgung VR
-A historical mystery game in VR. Explore an 18th century Korean palace and solve a series of puzzles to help save your friend.
+# Neungsohwa Over the Walls 담장 위 능소화
+Explore an 18th century Korean palace. 
 
-Currently in production, with an anticipated release for an initial version in mid May 2022 for Oculus Quest. Later releases will include Oculus Rift, HTC Vive, and Valve Index compatibility. 
+Currently in production, with an anticipated release for an initial version in mid May 2022 for Oculus Quest. Later releases will include broader compatability. 
 
 ![Gameplay example](Media/changdeokgung_vr_semester1.gif)
 

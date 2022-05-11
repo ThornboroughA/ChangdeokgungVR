@@ -7,7 +7,6 @@ public class MusicPlayer : MonoBehaviour
     [SerializeField] private AudioClip[] musicTracks;
     private AudioSource audioSource;
 
-
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -15,12 +14,16 @@ public class MusicPlayer : MonoBehaviour
 
     public void JungjeonMusic()
     {
+        if (audioSource.clip == musicTracks[0]) return;
+
         audioSource.Stop();
         audioSource.clip = musicTracks[0];
         audioSource.Play();
     }
     public void GungnyeoMusic()
     {
+        if (audioSource.clip == musicTracks[1]) return;
+        
         audioSource.Stop();
         audioSource.clip = musicTracks[1];
         audioSource.Play();
